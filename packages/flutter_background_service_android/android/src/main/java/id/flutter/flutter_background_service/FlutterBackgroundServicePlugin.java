@@ -192,7 +192,8 @@ public class FlutterBackgroundServicePlugin implements FlutterPlugin, MethodCall
         channel = null;
 
         if (mShouldUnbind && serviceBinder != null) {
-            binding.getApplicationContext().unbindService(serviceConnection);
+            //binding.getApplicationContext().unbindService(serviceConnection);
+            context.unbindService(serviceConnection);
             mShouldUnbind = false;
         }
     }
